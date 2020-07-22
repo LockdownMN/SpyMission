@@ -19,7 +19,7 @@ dress = st.multiselect('What was the dress that I wore for my first date?', ['Re
 my_list.append(dress)
 john = st.multiselect('Who is Jacob?', ['Best Friend','Boy Friend', 'First Cousin'])
 my_list.append(john)
-food = st.multiselect('The cuisine that tops the list of my favourite food?', ['Japanesse','South Indian', 'Italian'])
+food = st.multiselect('The cuisine that tops the list of my favourite food?', ['Japanesse','Korean', 'Italian'])
 my_list.append(food)
 wedding = st.multiselect('When did my best friend Beth get married?', ['10 January, 2018','12 March, 2018', '26 September, 2018'])
 my_list.append(wedding)
