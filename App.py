@@ -6,6 +6,7 @@ from PIL import Image
 st.title('Welcome to my world, a world where all the secrets will be revealed.')
 imag = Image.open('Banner.jpg')
 st.image(imag,use_column_width=True)
+imag2= Image.open('Result.jpg')
 my_list=[]
 
 st.header("To unlock the secrets, let's see how well you knoe me?")
@@ -46,6 +47,7 @@ if st.button('Press this button when ready'):
         guesses_remaining = guesses_remaining - 1
         if app2 == correct_ans:
             st.write('Welcome the world of my deepest secrests')
+            st.image(imag2,use_column_width=True)
             keep_playing = "false"
         else:
             if app2 != correct_ans:
