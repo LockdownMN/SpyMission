@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run --server.enableCORS false FastRender.py
+web: sh setup.sh && streamlit run --server.enableCORS false App.py
