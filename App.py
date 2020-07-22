@@ -21,7 +21,7 @@ john = st.multiselect('Who is Jacob?', ['Best Friend','Boy Friend', 'First Cousi
 my_list.append(john)
 food = st.multiselect('The cuisine that tops the list of my favourite food?', ['Japanesse','Korean', 'Italian'])
 my_list.append(food)
-wedding = st.multiselect('When did my best friend Beth get married?', ['10 January, 2018','12 March, 2018', '26 September, 2018'])
+wedding = st.multiselect('The day I got to be Maid of honour at my best friend wedding?', ['10 January, 2018','12 March, 2018', '26 September, 2018'])
 my_list.append(wedding)
 
 if st.button('Press this button when ready'):
@@ -29,7 +29,7 @@ if st.button('Press this button when ready'):
     df.to_csv('Wishlist.csv')
     cust_tags_list= pd.read_csv('Wishlist.csv') 
     s = cust_tags_list.tag_list[0]
-    correct_ans= 'Sky Diving, The Hollywood,California, Leather Jacket and Boot, Best Friend, South Indian, 12 March, 2018'
+    correct_ans= 'Sky Diving, The Hollywood,California, Leather Jacket and Boot, Best Friend, Korean, 12 March, 2018'
     guesses_remaining = 3
     #Clean the string
     def listToString(s):    
