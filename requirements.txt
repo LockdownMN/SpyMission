@@ -1,0 +1,12 @@
+streamlit
+pandas
+numpy
+shapely
+geopandas
+geopy
+Pillow
+geopy
+seaborn
+folium
+scikit-learn
+googlemaps
