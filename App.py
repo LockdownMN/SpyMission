@@ -3,33 +3,29 @@ import pandas as pd
 import numpy as np
 from PIL import Image
 
-st.title('Welcome to my world, a world where all the secrets will be revealed.')
+st.title('Welcome, Secret Agent.')
 imag = Image.open('Banner.jpg')
 st.image(imag,use_column_width=True)
 imag2= Image.open('Result.jpg')
 my_list=[]
 
-st.header("To unlock the secrets, let's see how well you knoe me?")
-st.subheader('Answer the following questions about me (there is only one correct answer)')
-adventure = st.multiselect('Which is my favourite adventure sport?', ['Sky Diving','Scuba Diving','Bungee Jumping'])
+st.header("Varify your identity before you proceed!")
+st.subheader('Answer the following questions. (There is only 1 correct answer)')
+adventure = st.multiselect('What was your rank in Operation Blue Lotus?', ['Sergeant','Flight Cadet','Group Captain'])
 my_list.append(adventure)
-holiday= st.multiselect('Which place is my dream holiday destination', ['The Alps, Switzerland','The Hollywood,California','Athenian Riviera, Greece'])
-my_list.append(holiday)
-dress = st.multiselect('which is my favourite flower?', ['Roses','Lotus', 'Lily'])
+dress = st.multiselect('Which operation was our most successful operation that got us a Medal of Honor?', ['Blue Lotus','Sky Light', 'Hill Top'])
 my_list.append(dress)
-john = st.multiselect('Who is Jacob?', ['Best Friend','Boy Friend', 'First Cousin'])
+john = st.multiselect('We successfully infiltraded the Secret Nuclear Program of which country?', ['Japan','North Korea', 'South Korea'])
 my_list.append(john)
-food = st.multiselect('The cuisine that tops the list of my favourite food?', ['Japanesse','Korean', 'Italian'])
+food = st.multiselect('Which is our only mission that failed?', ['Sky Light','Night Dawn', 'Black Hawk'])
 my_list.append(food)
-wedding = st.multiselect('The day I got to be Maid of honour at my best friend wedding?', ['10 January, 2018','12 March, 2018', '26 September, 2018'])
-my_list.append(wedding)
 
 if st.button('Press this button when ready'):
     df= pd.DataFrame({'tag_list': [my_list]})
     df.to_csv('Wishlist.csv')
     cust_tags_list= pd.read_csv('Wishlist.csv') 
     s = cust_tags_list.tag_list[0]
-    correct_ans= 'Scuba Diving, The Alps, Switzerland, Roses, Boy Friend, Korean, 12 March, 2018'
+    correct_ans= 'Flight Cadet, Sky Light, South Korea, Black Hawk'
     guesses_remaining = 3
     #Clean the string
     def listToString(s):    
@@ -46,12 +42,12 @@ if st.button('Press this button when ready'):
     while keep_playing == "true":
         guesses_remaining = guesses_remaining - 1
         if app2 == correct_ans:
-            st.write('Welcome the world of my deepest secrests')
+            st.write('Welcome abode Secret Agent!')
             st.image(imag2,use_column_width=True)
             keep_playing = "false"
         else:
             if app2 != correct_ans:
-                st.write("Sorry, that is not the correct answer. Try again!")
+                st.write("Sorry, your answers are not correct. Please Try again!")
                 keep_playing = "false"
                 
                                 
