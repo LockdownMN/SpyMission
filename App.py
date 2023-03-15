@@ -6,7 +6,7 @@ from PIL import Image
 st.title('Welcome, Secret Agent.')
 imag = Image.open('SpyBanner.jpg')
 st.image(imag,use_column_width=True)
-imag2= Image.open('Directions.jpg')
+imag2= Image.open('Match.jpg')
 my_list=[]
 
 st.header("Varify your identity before you proceed!")
